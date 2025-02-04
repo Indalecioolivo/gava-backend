@@ -1,4 +1,7 @@
-const listUsers = (req, res) => {
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
+
+const listUsers = async (req, res) => {
   res.send("Todos os usuários");
 };
 
