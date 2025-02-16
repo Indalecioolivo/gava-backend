@@ -4,14 +4,14 @@ const {
   listUsers,
   findUserById,
   createUser,
-  updateUser,
-  deleteUser,
+  updateUserById,
+  deleteUserById,
 } = require("./users-controllers/users");
 
 routes.get("/users", listUsers);
 routes.get("/users/:id", findUserById);
 routes.post("/users", createUser);
-routes.patch("/users/:id", updateUser);
-routes.delete("/users/:id", deleteUser);
+routes.patch("/users/:id", updateUserById);
+routes.delete("/users/:id", deleteUserById);
 
 module.exports = routes;
