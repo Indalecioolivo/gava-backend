@@ -11,7 +11,7 @@ const {
 routes.get("/users", listUsers);
 routes.get("/users/:id", findUserById);
 routes.post("/users", createUser);
-routes.patch("/users/:id", updateUserById);
+routes.put("/users/:id", updateUserById);
 routes.delete("/users/:id", deleteUserById);
 
 module.exports = routes;
