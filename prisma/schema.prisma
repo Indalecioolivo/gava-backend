@@ -13,7 +13,6 @@ model Users {
   password String
   firstName String
   lastName String
-  phone String
   createdAt DateTime @default(now())
   orders Orders[]
 }
@@ -29,9 +28,11 @@ model Products {
 
 model Orders{
   id Int @id @default(autoincrement())
-  userID Int
-  user Users @relation(fields: [userID], references: [id])
+  user_id Int
+  user Users @relation(fields: [user_id], references: [id])
+  products_id Int[]
+  qtd_products Int[]
   totalValue Float
   createdAt DateTime @default(now())
-  status String @default("pending")
+  ic_pending Boolean @default(true)
 }
